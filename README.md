@@ -1,2 +1,6 @@
-# software-dev-017
-A collection of all the demos and guides we we will use during the software development course.
+# Contents
+
+- Demos from the sessions
+- Useful guides
+
+Have fun! (ﾉ ◕ ヮ ◕)ﾉ\*:・ﾟ ✧
