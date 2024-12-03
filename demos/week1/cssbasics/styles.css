@@ -1,0 +1,47 @@
+/* You can reset your default styles with this package */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1rem;
+  background-color: indigo;
+  text-align: center;
+}
+
+body {
+  background-color: peru;
+  font-family: monospace;
+  color: slateblue;
+}
+
+/* this rule selects BOTH images */
+/* img {
+  border-radius: 20px;
+} */
+
+/* this rule targets ONE image, the one with the class attribute */
+.koala-tree {
+  border-radius: 20px;
+}
+
+/* in this selector, we are applying rules when the user hovers over our image */
+.koala-tree:hover {
+  border: 10px dashed red;
+}
+
+#hopeless-koala {
+  border: 5px solid darkolivegreen;
+}
+
+/* we use a . to select an element by class name
+we use a # to select an element by id */
+/* as a preference, I usually select HTML elements in CSS using class names, and id names in JavaScript */
+
+/* class names are reusable
+id names are unique */
+
+/* pseudo-classes --> a special type of selector that adds some interactivity */
