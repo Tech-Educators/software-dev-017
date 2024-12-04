@@ -1,0 +1,18 @@
+/* the star selector * selects everything! */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* background colour affects padding,
+but not margin margin overlaps,
+padding keeps a consistent size between elements  */
+.content1 {
+  padding: 30px;
+  background: blue;
+}
+.content2 {
+  padding: 30px;
+  background: orange;
+}
