@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* position: absolute; */
+  box-sizing: border-box;
+}
+body {
+  background-color: peru;
+}
+
+.title {
+  position: absolute;
+  top: 300px;
+  bottom: 300px;
+  right: 500px;
+  left: 500px;
+}
+.title2 {
+  position: relative;
+  /* left: 70px; */
+}
+
+/* I gave the parent position relative, so the children inside use the parent container as the reference for their position */
+.container2 {
+  position: absolute;
+  bottom: 40px;
+}
+
+.img2 {
+  position: relative;
+  /* right: 50px; */
+}
+
+header {
+  position: fixed;
+}
