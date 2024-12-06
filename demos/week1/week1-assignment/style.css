@@ -1,0 +1,14 @@
+/* Feel free to have a CSS reset!
+You can have the minimum one or the fancy one
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css"); */
+
+body {
+  background-color: peru;
+}
+
+/* When you are styling your page, my advice is that you use flexbox to style the layout of your website, and positioning for individual elements. */
+
+/* If you want to build something similar to the SpaceY website, these are some selectors that will be userful.
+background-image --> we use this one in CSS to add a background image. You can also customise the size
+vh and vw --> we use the viewport height and viewport width to show the content of our website adapted to what the user can see on their screen at a time.
+z-index --> if we change the z-index of an element, it will push that element to the front or the back of the screen */
