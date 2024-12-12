@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: papayawhip;
+}
+
+.holy-grail {
+  display: grid;
+  /* we need to create a template of our grid */
+  /* grid-template-rows: 1rem 2rem 1rem 4rem;
+  grid-template-columns: 100px 25% auto 56px; */
+  /* grid-template: ; */
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header {
+  grid-column-start: 1;
+  /* the last number of columns or rows is represented with a -1 */
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* The media query below will rewrite the grid template we set up above, but it will keep the rest of rules, as we haven't specified an alternative */
+/* @media (min-width: 500px) {
+  .holy-grail {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
+  }
+} */
