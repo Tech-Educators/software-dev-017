@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./forms.js" defer></script>
+    <title>Forms and validation</title>
+  </head>
+  <body>
+    <h1>Forms and Validation</h1>
+    <!-- form is the parent element -->
+    <form id="studentForm">
+      <label for="username">Username</label>
+      <!-- !the name attribute is a direct reference to a specific input -->
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Write your full name"
+        required
+      />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" />
+      <label for="password">Password</label>
+      <!-- the type attribute makes sure the user's data is validated -->
+      <input
+        type="password"
+        id="password"
+        name="password"
+        minlength="12"
+        placeholder="Write your password"
+      />
+      <label for="date-of-birth">Date of birth</label>
+      <input
+        type="date"
+        id="date-of-birth"
+        name="date-of-birth"
+        min="2006-01-01"
+      />
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="0" max="120" />
+      <!-- for predetermined values, we use a select and options -->
+      <label for="location">Location</label>
+      <select name="location" id="location">
+        <option value="Norwich">Norwich</option>
+        <option value="Leicester">Leicester</option>
+        <option value="Hull">Hull</option>
+        <option value="Brighton">Brighton</option>
+        <option value="Nottingham">Nottingham</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="student">Are you a student?</label>
+      <input type="checkbox" id="student" name="student" />
+      <label for="course">What course are you enrolling?</label>
+      <label for="software"
+        ><input type="radio" name="software" value="software" />Software
+        Course</label
+      >
+      <label for="games"
+        ><input type="radio" name="games" value="games" />Games Course</label
+      >
+
+      <button type="submit">Submit your data</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: salmon;
+}
+
+/* you can use flex in the form parent to style labels and inputs */
+#studentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* I am selecting a specific input using the type */
+input[type="password"] {
+  padding: 10px;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  font-family: monospace;
+  color: white;
+}
+input[type="password"]::placeholder {
+  color: burlywood;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  font-family: monospace;
+  border-radius: 5px;
+  background-color: yellowgreen;
+}
+
+button[type="submit"]:hover {
+  background-color: white;
+  cursor: pointer;
+}
