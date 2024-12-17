@@ -1,3 +1,17 @@
 body {
   background-color: burlywood;
 }
+
+#fox-container {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: cadetblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.fox-img {
+  width: 150px;
+  height: 250px;
+  border-radius: 10px;
+}

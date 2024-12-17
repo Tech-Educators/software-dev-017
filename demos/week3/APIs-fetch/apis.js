@@ -21,8 +21,36 @@ async function getFoxes() {
   //If you want to use this value outisde the function,
   return wrangledData;
 }
-getFoxes(); //it's a different picture for each call
-getFoxes();
+// getFoxes(); //it's a different picture for each call
+// getFoxes();
 
 //===========================================
 //You could use the data in the same way you used the data from your images array to create your thumbnails!
+
+//STEP 1: Select the DOM element we want to manipulate (div)
+const foxContainer = document.querySelector("#fox-container");
+
+//I want to create images to display my foxes data
+//This function will create different images with different sources --> reusable
+function createFoxes(foxUrl) {
+  const foxImg = document.createElement("img");
+  foxImg.src = foxUrl;
+  foxImg.alt = "random fox image";
+  foxImg.className = "fox-img";
+  foxContainer.appendChild(foxImg);
+}
+
+//I want to combine our data from the API with the image that you are creating
+//We used a third function here to be able to await the API data. We cannot await a function call as an argument
+// createFoxes(await getFoxes()) --> this is what we want, but the syntax requires for await to be used with async
+
+async function displayImageWithAPISrc() {
+  const getFoxesData = await getFoxes();
+  createFoxes(getFoxesData);
+}
+
+displayImageWithAPISrc();
+displayImageWithAPISrc();
+displayImageWithAPISrc();
+displayImageWithAPISrc();
+displayImageWithAPISrc();
