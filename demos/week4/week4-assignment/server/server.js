@@ -10,7 +10,7 @@
 //I need a route to CREATE new data in the database
 
 app.post("/new-data", async (req, res) => {
-  const data = req.body;
+  const data = req.body.formValues;
   const query = await db.query(
     `INSERT INTO table_name (col, col2, col3) VALUES ($1, $2, $3)`,
     [data.input1, data.input2, data.input3]
