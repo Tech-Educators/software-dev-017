@@ -1,0 +1,6 @@
+/* Pure selectors, like className, only target one specific DOM element */
+
+.header {
+  background-color: blue;
+  font-size: 4rem;
+}

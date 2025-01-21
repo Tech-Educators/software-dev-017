@@ -1,0 +1,9 @@
+/* This is our globals CSS --> this is where we write the CSS that applies to the whole app! */
+/* We cannot use the body tag to style the whole body of our app. Instead we are going to use the pseudo-class :root */
+:root {
+  font-family: monospace;
+  background-image: url(https://images.unsplash.com/photo-1678687975573-707270830606?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+/* Media queries also go here */
+/* @media */
