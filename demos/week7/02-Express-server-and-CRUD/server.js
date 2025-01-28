@@ -59,12 +59,12 @@ app.get("/biscuits", async (req, res) => {
 });
 
 //I want to CREATE a new entry in the biscuits table
-app.post("/add-biscuit", async (req, res) => {
+app.post("/add-biscuit", (req, res) => {
   //we need an element that stores the new data we are adding to the database
   //Our request parameter has a body object to store this new data
   const newData = req.body;
   //I query the database
-  const query = await db.query(
+  const query = db.query(
     `INSERT INTO biscuits (biscuit_name, src, description, crunchiness) VALUES($1, $2, $3, $4);`,
     [
       newData.biscuit_name,
@@ -86,3 +86,48 @@ app.post("/add-biscuit", async (req, res) => {
 //   description: "Is it a biscuit?",
 //   crunchiness: 0,
 // };
+
+//I want to UPDATE an existing biscuit entry in the biscuits table
+//We want the params in this url to be dynamic to represent any id value of the entry that we want to update
+app.put("/update-biscuit/:id", (req, res) => {
+  //an element containing the data we want to update --> body (req.body)
+  const updateData = req.body;
+  //an element that specifies which biscuit entry we want to update --> params
+  //to make sure we select a specific entry, we will also a unique identifier: the id value
+  const paramsToUpdateBiscuit = req.params;
+  //I want to query the database
+  const query = db.query(
+    `UPDATE biscuits SET biscuit_name= $1, src= $2, description= $3, crunchiness= $4 WHERE id= $5`,
+    [
+      updateData.biscuit_name,
+      updateData.src,
+      updateData.description,
+      updateData.crunchiness,
+      paramsToUpdateBiscuit.id,
+    ]
+  );
+  res.json({ message: "Data updated! Go have a look in your table" });
+});
+
+//this is an example of what the params object will look like
+// params = {
+//   id: 1,
+// };
+
+//Params vs parameters
+//Parameters --> placeholders in a function that we will replace with an argument later on
+//Params --> a part of the url after the domain name
+
+//I want to DELETE one biscuit entry from the biscuits table
+//We need dynamic params so we can specify which entry we want to delete
+app.delete("/delete-biscuit/:id", (req, res) => {
+  //I just need to know which specific entry I am deleting --> params
+  const paramsToDeleteBiscuit = req.params;
+  //I need to query my database
+  const query = db.query(`DELETE FROM biscuits WHERE id= $1`, [
+    paramsToDeleteBiscuit.id,
+  ]);
+  res.json({
+    message: "You have performed a destructive operation. How dare you?!",
+  });
+});
