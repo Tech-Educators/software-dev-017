@@ -1,0 +1,28 @@
+/* leave this for now */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* the :root pseudo-class selects everything in my app */
+/* CSS variables are custom selectors */
+:root {
+  /* we are declaring the CSS variable here */
+  --background: #ffffff;
+  --foreground: #171717;
+  --highlight: rgb(181, 124, 18);
+  --font: monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  /* we are using the variable name instead of the actual value for convenience */
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font);
+}
