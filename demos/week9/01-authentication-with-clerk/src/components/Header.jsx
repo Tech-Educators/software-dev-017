@@ -1,5 +1,5 @@
 // I am going to use this Header component to set up the authentication interface for the user
-"use client";
+
 import {
   SignedIn,
   SignedOut,
