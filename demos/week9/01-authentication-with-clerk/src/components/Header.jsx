@@ -1,5 +1,5 @@
 // I am going to use this Header component to set up the authentication interface for the user
-
+"use client";
 import {
   SignedIn,
   SignedOut,
@@ -8,18 +8,11 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 
-//we have access to the clerk userId
-import { auth } from "@clerk/nextjs/server";
-
 export default function Header() {
-  //we have destructered (extracted) the userId value from auth
-  const { userId } = auth();
   return (
     <>
       <h1>Header</h1>
-      {/* This is the userId value that clerk assigns to a user when they sign up */}
-      {/* we can store this value in a database to relate it to posts, comments... */}
-      <p>{userId}</p>
+
       <SignedIn>
         {/* this will show when the user is signed-in */}
 
