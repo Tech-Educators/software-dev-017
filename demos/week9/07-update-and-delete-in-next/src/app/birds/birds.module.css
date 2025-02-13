@@ -1,0 +1,14 @@
+/* This CSS module will apply styles to the birds page */
+/* I can just write CSS as usual */
+/* I need to use pure selectors --> a speficic class name, not the HTML tag */
+
+.birdsDiv {
+  display: flex;
+  background-color: rgb(58, 109, 58);
+  flex-direction: column;
+  align-items: center;
+}
+
+.birdsHeading {
+  font-size: 3rem;
+}
